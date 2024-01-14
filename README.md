@@ -3,7 +3,6 @@
 </p>
 <h1 align="center">HBnB console</h1>
 <p align="center">An AirBnB clone.</p>
----
 
 ## Description
 
@@ -14,7 +13,7 @@ The console will be a tool to validate this storage engine it is only the back e
 
 HolbertonBnB utilizes the following classes:
 
-### 1- BaseModel    
+### 1- [BaseModel] (./models/base_model.py)   
 PUBLIC INSTANCE ATTRIBUTES:
         <ul>
         <li>`id`</li>
@@ -304,4 +303,4 @@ Alternatively, you can specify a single test file to run at a time:
 $ python3 unittest -m tests/test_console.py
 ```
 ## Authors 
-* **mohamed_alaga** <[MohamedAlaga](https://github.com/MohamedAlaga)>
+* **Mohamed Alaga** <[MohamedAlaga](https://github.com/MohamedAlaga)>
