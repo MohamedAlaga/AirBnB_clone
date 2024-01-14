@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+module to make a console for the project
+"""
 import cmd
 from models.base_model import BaseModel
 from models.user import User
@@ -8,9 +11,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from models import storage
-"""
-module to make a console for the project
-"""
+
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter for HBNB"""
