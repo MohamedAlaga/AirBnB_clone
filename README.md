@@ -14,36 +14,36 @@ The console will be a tool to validate this storage engine it is only the back e
 
 HolbertonBnB utilizes the following classes:
 
-### 1- BaseModel
-    PUBLIC INSTANCE ATTRIBUTES:
+### 1- BaseModel    
+PUBLIC INSTANCE ATTRIBUTES:
         <ul>
         <li>`id`</li>
         <li>`created_at`</li>
-        <li`>updated_at`	</li>
+        <li>`updated_at`</li>
         </ul>
-    PUBLIC INSTANCE METHODS:
+PUBLIC INSTANCE METHODS:
         <ul>
         <li>`save`</li>
         <li>`to_dict`</li>
         </ul>
 
 ### 2- FileStorage
-    PUBLIC INSTANCE METHODS:
+PUBLIC INSTANCE METHODS:
         <ul>
         <li>`all`</li>
         <li>`new`</li>
         <li>`save`</li>
         <li>`reload`</li>
         </ul>
-    PRIVATE CLASS ATTRIBUTES:\n
+PRIVATE CLASS ATTRIBUTES:
         <ul>
         <li>`ile_path`</li>
         <li>`objects`</li>
         </ul>
 
 ### 3-User
-Inherits from BaseModel
-    PUBLIC CLASS ATTRIBUTES:
+Inherits from BaseModel<br>
+PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`email`</li>
         <li>`password`</li>
@@ -58,7 +58,7 @@ Inherits from BaseModel
         </ul>
 
 ### 5-City
-Inherits from BaseModel
+Inherits from BaseModel<br>
     PUBLIC CLASS ATTRIBUTES
         <ul>
         <li>`state_id`</li>
@@ -66,14 +66,14 @@ Inherits from BaseModel
         </ul>
 
 ### 6-Amenity
-Inherits from BaseModel
+Inherits from BaseModel<br>
     PUBLIC CLASS ATTRIBUTES
         <ul>
         <li>`name`</li>
         </ul>
 
 ### 7-Place
-Inherits from BaseModel
+Inherits from BaseModel<br>
     PUBLIC CLASS ATTRIBUTES
         <ul>
         <li>`city_id`</li>
@@ -90,7 +90,7 @@ Inherits from BaseModel
         </ul>
 
 ### 8-Review
-Inherits from BaseModel
+Inherits from BaseModel<br>
     PUBLIC CLASS ATTRIBUTES
         <ul>
         <li>`place_id`</li>
