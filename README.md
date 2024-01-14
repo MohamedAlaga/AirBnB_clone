@@ -13,7 +13,7 @@ The console will be a tool to validate this storage engine it is only the back e
 
 HolbertonBnB utilizes the following classes:
 
-1- [BaseModel] (./models/base_model.py)
+### 1- [BaseModel](./models/base_model.py)
 PUBLIC INSTANCE ATTRIBUTES:
         <ul>
         <li>`id`</li>
