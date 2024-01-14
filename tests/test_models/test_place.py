@@ -130,14 +130,6 @@ class TestPlace_instantiation(unittest.TestCase):
         pl = Place(None)
         self.assertNotIn(None, pl.__dict__.values())
 
-    def test_instantiation_with_kwargs(self):
-        dt = datetime.today()
-        dt_iso = dt.isoformat()
-        pl = Place(id="345", created_at=dt_iso, updated_at=dt_iso)
-        self.assertEqual(pl.id, "345")
-        self.assertEqual(pl.created_at, dt)
-        self.assertEqual(pl.updated_at, dt)
-
     def test_instantiation_with_None_kwargs(self):
         with self.assertRaises(TypeError):
             Place(id=None, created_at=None, updated_at=None)

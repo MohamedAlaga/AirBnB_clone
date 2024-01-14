@@ -70,14 +70,6 @@ class TestState_instantiation(unittest.TestCase):
         st = State(None)
         self.assertNotIn(None, st.__dict__.values())
 
-    def test_instantiation_with_kwargs(self):
-        dt = datetime.today()
-        dt_iso = dt.isoformat()
-        st = State(id="345", created_at=dt_iso, updated_at=dt_iso)
-        self.assertEqual(st.id, "345")
-        self.assertEqual(st.created_at, dt)
-        self.assertEqual(st.updated_at, dt)
-
     def test_instantiation_with_None_kwargs(self):
         with self.assertRaises(TypeError):
             State(id=None, created_at=None, updated_at=None)

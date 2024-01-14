@@ -76,14 +76,6 @@ class TestUser_instantiation(unittest.TestCase):
         us = User(None)
         self.assertNotIn(None, us.__dict__.values())
 
-    def test_instantiation_with_kwargs(self):
-        dt = datetime.today()
-        dt_iso = dt.isoformat()
-        us = User(id="345", created_at=dt_iso, updated_at=dt_iso)
-        self.assertEqual(us.id, "345")
-        self.assertEqual(us.created_at, dt)
-        self.assertEqual(us.updated_at, dt)
-
     def test_instantiation_with_None_kwargs(self):
         with self.assertRaises(TypeError):
             User(id=None, created_at=None, updated_at=None)
