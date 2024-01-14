@@ -42,7 +42,7 @@ PRIVATE CLASS ATTRIBUTES:
         </ul>
 
 ### 3-User
-Inherits from BaseModel<br>
+Inherits from BaseModel.<br>
 PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`email`</li>
@@ -52,29 +52,30 @@ PUBLIC CLASS ATTRIBUTES:
         </ul>
 
 ### 4-State 
-Inherits from BaseModel
+Inherits from BaseModel.<br>
+PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`name`</li>
         </ul>
 
 ### 5-City
-Inherits from BaseModel<br>
-    PUBLIC CLASS ATTRIBUTES
+Inherits from BaseModel.<br>
+    PPUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`state_id`</li>
         <li>`name`</li>
         </ul>
 
 ### 6-Amenity
-Inherits from BaseModel<br>
-    PUBLIC CLASS ATTRIBUTES
+Inherits from BaseModel.<br>
+    PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`name`</li>
         </ul>
 
 ### 7-Place
-Inherits from BaseModel<br>
-    PUBLIC CLASS ATTRIBUTES
+Inherits from BaseModel.<br>
+    PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`city_id`</li>
         <li>`user_id`</li>
@@ -90,8 +91,8 @@ Inherits from BaseModel<br>
         </ul>
 
 ### 8-Review
-Inherits from BaseModel<br>
-    PUBLIC CLASS ATTRIBUTES
+Inherits from BaseModel.<br>
+    PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`place_id`</li>
         <li>`user_id`</li>
