@@ -9,8 +9,12 @@ from models.place import Place
 from models.review import Review
 from models import storage
 
+
 class HBNBCommand(cmd.Cmd):
+    """Command interpreter for HBNB"""
     prompt = '(hbnb) '
+    classes = ["BaseModel", "User", "State",
+               "City", "Amenity", "Place", "Review"]
 
     def do_quit(self, arg):
         """
@@ -34,7 +38,7 @@ class HBNBCommand(cmd.Cmd):
         """
         if arg == "":
             print("** class name missing **")
-        elif arg != "BaseModel" and arg != "User" and arg != "State" and arg != "City" and arg != "Amenity" and arg != "Place" and arg != "Review":
+        elif arg not in self.classes:
             print("** class doesn't exist **")
         else:
             if arg == "BaseModel":
@@ -63,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             args = arg.split()
-            if args[0] != "BaseModel" and args[0] != "User" and args[0] != "State" and args[0] != "City" and args[0] != "Amenity" and args[0] != "Place" and args[0] != "Review":
+            if args[0] not in self.classes:
                 print("** class doesn't exist **")
             elif len(args) == 1:
                 print("** instance id missing **")
@@ -83,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             args = arg.split()
-            if args[0] != "BaseModel" and args[0] != "User" and args[0] != "State" and args[0] != "City" and args[0] != "Amenity" and args[0] != "Place" and args[0] != "Review":
+            if args[0] not in self.classes:
                 print("** class doesn't exist **")
             elif len(args) == 1:
                 print("** instance id missing **")
@@ -104,7 +108,7 @@ class HBNBCommand(cmd.Cmd):
             print([str(value) for key, value in storage.all().items()])
         else:
             args = arg.split()
-            if args[0] != "BaseModel" and args[0] != "User" and args[0] != "State" and args[0] != "City" and args[0] != "Amenity" and args[0] != "Place" and args[0] != "Review":
+            if args[0] not in self.classes:
                 print("** class doesn't exist **")
             else:
                 print([str(value) for key, value in storage.all().items()])
@@ -119,7 +123,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             args = arg.split()
-            if args[0] != "BaseModel" and args[0] != "User" and args[0] != "State" and args[0] != "City" and args[0] != "Amenity" and args[0] != "Place" and args[0] != "Review":
+            if args[0] not in self.classes:
                 print("** class doesn't exist **")
             elif len(args) == 1:
                 print("** instance id missing **")
@@ -135,11 +139,13 @@ class HBNBCommand(cmd.Cmd):
                     attr_value = args[3]
                     try:
                         attr_value = eval(attr_value)
-                    except:
-                        pass
+                    except Exception as e:
+                        print(str(e))
                     setattr(obj, attr_name, attr_value)
                     obj.save()
                 else:
                     print("** no instance found **")
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
