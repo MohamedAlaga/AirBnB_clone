@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """This module defines a class to manage file storage for hbnb clone"""
-
 import json
 import os.path
 from models.base_model import BaseModel
@@ -10,6 +9,8 @@ from models.state import State
 from models.city import City
 from models.amenity import Amenity
 from models.review import Review
+
+
 class FileStorage:
     """This class manages storage of hbnb models in JSON format"""
     __file_path = "file.json"
@@ -26,27 +27,19 @@ class FileStorage:
 
     def save(self):
         """Saves storage dictionary to file"""
-        new_dict = {}
-        for key, value in FileStorage.__objects.items():
-            new_dict[key] = value.to_dict()
+        odict = FileStorage.__objects
+        objdict = {obj: odict[obj].to_dict() for obj in odict.keys()}
         with open(FileStorage.__file_path, "w") as f:
-            json.dump(new_dict, f)
+            json.dump(objdict, f)
 
     def reload(self):
         """Loads storage dictionary from file"""
-        if os.path.isfile(FileStorage.__file_path):
-            with open(FileStorage.__file_path, "r") as f:
-                new_dict = json.load(f)
-            for key, value in new_dict.items():
-                if value["__class__"] == "User":
-                    FileStorage.__objects[key] = User(**value)
-                elif value["__class__"] == "Place":
-                    FileStorage.__objects[key] = Place(**value)
-                elif value["__class__"] == "State":
-                    FileStorage.__objects[key] = State(**value)
-                elif value["__class__"] == "City":
-                    FileStorage.__objects[key] = City(**value)
-                elif value["__class__"] == "Amenity":
-                    FileStorage.__objects[key] = Amenity(**value)
-                elif value["__class__"] == "Review":
-                    FileStorage.__objects[key] = Review(**value)
+        try:
+            with open(FileStorage.__file_path) as f:
+                objdict = json.load(f)
+                for o in objdict.values():
+                    cls_name = o["__class__"]
+                    del o["__class__"]
+                    self.new(eval(cls_name)(**o))
+        except FileNotFoundError:
+            return
