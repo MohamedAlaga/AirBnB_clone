@@ -14,86 +14,86 @@ The console will be a tool to validate this storage engine it is only the back e
 
 HolbertonBnB utilizes the following classes:
 
-1- BaseModel\n
+### 1- BaseModel
     PUBLIC INSTANCE ATTRIBUTES:
         <ul>
-        <li>id</li>
-        <li>created_at</li>
-        <li>updated_at	</li>
+        <li>`id`</li>
+        <li>`created_at`</li>
+        <li`>updated_at`	</li>
         </ul>
     PUBLIC INSTANCE METHODS:
         <ul>
-        <li>save</li>
-        <li>to_dict</li>
+        <li>`save`</li>
+        <li>`to_dict`</li>
         </ul>
 
-2- FileStorage\n
+### 2- FileStorage
     PUBLIC INSTANCE METHODS:
         <ul>
-        <li>all</li>
-        <li>new</li>
-        <li>save</li>
-        <li>reload</li>
+        <li>`all`</li>
+        <li>`new`</li>
+        <li>`save`</li>
+        <li>`reload`</li>
         </ul>
     PRIVATE CLASS ATTRIBUTES:\n
         <ul>
-        <li>file_path</li>
-        <li>objects</li>
+        <li>`ile_path`</li>
+        <li>`objects`</li>
         </ul>
 
-3-User\n
+### 3-User
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES:
         <ul>
-        <li>email</li>
-        <li>password</li>
-        <li>first_name</li>
-        <li>last_name</li>
+        <li>`email`</li>
+        <li>`password`</li>
+        <li>`first_name`</li>
+        <li>`last_name`</li>
         </ul>
 
-4-State \n
+### 4-State 
 Inherits from BaseModel
         <ul>
-        <li>name</li>
+        <li>`name`</li>
         </ul>
 
-5-City\n
-Inherits from BaseModel
-    PUBLIC CLASS ATTRIBUTES
-        <ul>
-        <li>state_id</li>
-        <li>name</li>
-        </ul>
-
-6-Amenity\n
+### 5-City
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
-        <li>name</li>
+        <li>`state_id`</li>
+        <li>`name`</li>
         </ul>
 
-7-Place\n
+### 6-Amenity
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
-        <li>city_id</li>
-        <li>user_id</li>
-        <li>name</li>
-        <li>description</li>
-        <li>number_rooms</li>
-        <li>number_bathrooms</li>
-        <li>max_guest</li>
-        <li>price_by_night</li>
-        <li>latitude</li>
-        <li>longitude</li>
-        <li>amenity_ids</li>
+        <li>`name`</li>
         </ul>
 
-8-Review\n
+### 7-Place
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
-        <li>place_id</li>
-        <li>user_id</li>
-        <li>text</li>
+        <li>`city_id`</li>
+        <li>`user_id`</li>
+        <li>`name`</li>
+        <li>`description`</li>
+        <li>`number_rooms`</li>
+        <li>`number_bathrooms`</li>
+        <li>`max_guest`</li>
+        <li>`price_by_night`</li>
+        <li>`latitude`</li>
+        <li>`longitude`</li>
+        <li>`amenity_ids`</li>
+        </ul>
+
+### 8-Review
+Inherits from BaseModel
+    PUBLIC CLASS ATTRIBUTES
+        <ul>
+        <li>`place_id`</li>
+        <li>`user_id`</li>
+        <li>`text`</li>
         </ul>
