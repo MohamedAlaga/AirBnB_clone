@@ -13,7 +13,7 @@ The console will be a tool to validate this storage engine it is only the back e
 
 HolbertonBnB utilizes the following classes:
 
-### 1- [BaseModel](./models/base_model.py)
+### 1-[BaseModel](./models/base_model.py)
 PUBLIC INSTANCE ATTRIBUTES:
         <ul>
         <li>`id`</li>
@@ -26,7 +26,7 @@ PUBLIC INSTANCE METHODS:
         <li>`to_dict`</li>
         </ul>
 
-### 2- FileStorage
+### 2-[FileStorage](./models/engine/file_storage.py)
 PUBLIC INSTANCE METHODS:
         <ul>
         <li>`all`</li>
@@ -40,7 +40,7 @@ PRIVATE CLASS ATTRIBUTES:
         <li>`objects`</li>
         </ul>
 
-### 3-User
+### 3-[User](./models/user.py)
 Inherits from BaseModel.<br>
 PUBLIC CLASS ATTRIBUTES:
         <ul>
@@ -50,14 +50,14 @@ PUBLIC CLASS ATTRIBUTES:
         <li>`last_name`</li>
         </ul>
 
-### 4-State 
+### 4-[State](./models/state.py) 
 Inherits from BaseModel.<br>
 PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`name`</li>
         </ul>
 
-### 5-City
+### 5-[City](./models/city.py)
 Inherits from BaseModel.<br>
     PPUBLIC CLASS ATTRIBUTES:
         <ul>
@@ -65,14 +65,14 @@ Inherits from BaseModel.<br>
         <li>`name`</li>
         </ul>
 
-### 6-Amenity
+### 6-[Amenity](./models/amenity.py)
 Inherits from BaseModel.<br>
     PUBLIC CLASS ATTRIBUTES:
         <ul>
         <li>`name`</li>
         </ul>
 
-### 7-Place
+### 7-[Place](./models/place.py)
 Inherits from BaseModel.<br>
     PUBLIC CLASS ATTRIBUTES:
         <ul>
@@ -89,7 +89,7 @@ Inherits from BaseModel.<br>
         <li>`amenity_ids`</li>
         </ul>
 
-### 8-Review
+### 8-[Review](./models/review.py)
 Inherits from BaseModel.<br>
     PUBLIC CLASS ATTRIBUTES:
         <ul>
@@ -98,7 +98,7 @@ Inherits from BaseModel.<br>
         <li>`text`</li>
         </ul>
 
-## Using the Console
+## Using the [Console](./console.py)
 HBnB console can be run both interactively and non-interactively.
 While running in interactive mode, the console displays a prompt for input:<br>
 ```
