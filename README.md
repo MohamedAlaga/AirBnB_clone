@@ -14,7 +14,7 @@ The console will be a tool to validate this storage engine it is only the back e
 
 HolbertonBnB utilizes the following classes:
 
-1- BaseModel
+1- BaseModel\n
     PUBLIC INSTANCE ATTRIBUTES:
         <ul>
         <li>id</li>
@@ -27,7 +27,7 @@ HolbertonBnB utilizes the following classes:
         <li>to_dict</li>
         </ul>
 
-2- FileStorage
+2- FileStorage\n
     PUBLIC INSTANCE METHODS:
         <ul>
         <li>all</li>
@@ -35,13 +35,13 @@ HolbertonBnB utilizes the following classes:
         <li>save</li>
         <li>reload</li>
         </ul>
-    PRIVATE CLASS ATTRIBUTES:
+    PRIVATE CLASS ATTRIBUTES:\n
         <ul>
         <li>file_path</li>
         <li>objects</li>
         </ul>
 
-3-User
+3-User\n
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES:
         <ul>
@@ -51,13 +51,13 @@ Inherits from BaseModel
         <li>last_name</li>
         </ul>
 
-4-State 
+4-State \n
 Inherits from BaseModel
         <ul>
         <li>name</li>
         </ul>
 
-5-City
+5-City\n
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
@@ -65,14 +65,14 @@ Inherits from BaseModel
         <li>name</li>
         </ul>
 
-6-Amenity
+6-Amenity\n
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
         <li>name</li>
         </ul>
 
-7-Place
+7-Place\n
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
@@ -89,7 +89,7 @@ Inherits from BaseModel
         <li>amenity_ids</li>
         </ul>
 
-8-Review
+8-Review\n
 Inherits from BaseModel
     PUBLIC CLASS ATTRIBUTES
         <ul>
