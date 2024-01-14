@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module defines a class to manage file storage for hbnb clone"""
+"""__init__ magic method for models directory"""
+
 from models.engine.file_storage import FileStorage
-strorage = FileStorage()
-strorage.reload()
+storage = FileStorage()
+storage.reload()
