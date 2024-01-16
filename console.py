@@ -148,20 +148,22 @@ class HBNBCommand(cmd.Cmd):
                     obj.save()
                 else:
                     print("** no instance found **")
-    
-    def do_all(self, arg):
-        """
-        Prints all string representation of all instances
-        based or not on the class name.
-        """
-        if arg == "":
-            print([str(value) for key, value in storage.all().items()])
+def do_all(self, arg):
+        """Usage: all or all <class> or <class>.all()
+        Display string representations of all instances of a given class.
+        If no class is specified, displays all instantiated objects."""
+        argl = parse(arg)
+        if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
         else:
-            args = arg.split()
-            if args[0] not in self.classes:
-                print("** class doesn't exist **")
-            else:
-                print([str(value) for key, value in storage.all().items()])
+            objl = []
+            for obj in storage.all().values():
+                if len(argl) > 0 and argl[0] == obj.__class__.__name__:
+                    objl.append(obj.__str__())
+                elif len(argl) == 0:
+                    objl.append(obj.__str__())
+            print(objl)
+
 
 
 if __name__ == '__main__':
